@@ -10,18 +10,15 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.night-mode {
+body.night-mode {
   background-color: #222;
-  color: darken(white, 15%);
+  color: #d9d9d9;
 }
-
-.tumbler {
+body.night-mode .tumbler {
   transform: translateX(calc(100% - 2px));
 }
-
-.post {
-  border-bottom: 1px dashed darken(white, 15%);
+body.night-mode .post {
+  border-bottom: 1px dashed #d9d9d9;
 }
 
 .header {
@@ -43,7 +40,7 @@ body {
   width: 50px;
   height: 30px;
   background-color: black;
-  border: darken(#aae2f1, 40);
+  border: #1d92b2;
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
@@ -53,8 +50,7 @@ body {
   display: flex;
   position: relative;
 }
-
-svg {
+.tumbler-wrapper svg {
   width: 15px;
   height: 15px;
 }
@@ -95,16 +91,17 @@ svg {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-
-&:first-child {
+.post__title:first-child {
   margin-top: 0;
 }
 
 .footer {
-  width: 80vw;
-  max-width: 500px;
   padding: 1rem;
-  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* This ensures the text inside is centered */
+  flex-direction: column; /* Stacks the content vertically */
 }
 
 .description {
